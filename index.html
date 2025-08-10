@@ -8,25 +8,29 @@
   <style>
     body { margin:0; font-family: 'Inter', sans-serif; background:#0b1220; color:#f8fafc; overflow-x:hidden; }
     a { color:#60a5fa; text-decoration:none; }
-    .nav { position:sticky; top:0; backdrop-filter:blur(8px); background:rgba(18,26,43,0.9); padding:12px 20px; display:flex; justify-content:space-between; align-items:center; z-index:100; }
+    .nav { position:sticky; top:0; backdrop-filter:blur(8px); background:rgba(18,26,43,0.9); padding:12px 20px; display:flex; justify-content:space-between; align-items:center; z-index:100; border-bottom:1px solid rgba(148,163,184,.2); }
     .brand { font-size:1.4rem; font-weight:800; background:linear-gradient(90deg,#60a5fa,#8b5cf6); -webkit-background-clip:text; color:transparent; }
     .nav a { margin-left:16px; font-weight:600; transition:color .2s; }
     .nav a:hover { color:#f8fafc; }
-    header { display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:center; padding:60px 20px; animation:fadeIn 1.2s ease forwards; }
-    .hero { font-size:clamp(2rem,5vw,3.5rem); font-weight:800; background:linear-gradient(135deg,#1e3a8a,#2563eb,#8b5cf6); -webkit-background-clip:text; color:transparent; animation:slideUp 1.5s ease forwards; }
-    .sub { color:#a4b1c6; margin:16px 0; animation:fadeIn 2s ease forwards; }
+    header { display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:center; padding:60px 20px; animation:fadeIn 1.2s ease forwards; max-width:1100px; margin:auto; }
+    .hero { font-size:clamp(2rem,5vw,3.5rem); font-weight:800; background:linear-gradient(135deg,#1e3a8a,#2563eb,#8b5cf6); -webkit-background-clip:text; color:transparent; animation:slideUp 1.0s ease forwards; }
+    .sub { color:#a4b1c6; margin:16px 0; animation:fadeIn 1.4s ease forwards; }
     .cta .btn { display:inline-block; padding:12px 18px; border-radius:10px; background:#121a2b; border:1px solid rgba(148,163,184,.25); margin-right:10px; font-weight:600; transition:all .3s ease; }
     .cta .btn.primary { background:linear-gradient(90deg,#60a5fa,#8b5cf6); border:none; }
     .cta .btn:hover { transform:translateY(-3px); box-shadow:0 6px 20px rgba(96,165,250,0.4); }
-    section { padding:60px 20px; max-width:1100px; margin:auto; animation:fadeInUp 1.5s ease forwards; }
+    section { padding:60px 20px; max-width:1100px; margin:auto; animation:fadeInUp 1s ease forwards; }
     h2 { font-size:2rem; margin-bottom:20px; border-bottom:2px solid #3b82f6; display:inline-block; padding-bottom:4px; }
     .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
     .card { background:#121a2b; padding:20px; border-radius:14px; border:1px solid rgba(148,163,184,0.25); transition:transform .3s ease, box-shadow .3s ease; position:relative; overflow:hidden; }
     .card:hover { transform:translateY(-5px) scale(1.02); box-shadow:0 10px 30px rgba(96,165,250,0.3); }
-    .pill { font-size:0.75rem; display:inline-block; padding:3px 8px; border-radius:999px; background:rgba(96,165,250,0.1); border:1px solid rgba(96,165,250,0.3); margin-bottom:10px; }
+    .pill { font-size:0.75rem; display:inline-block; padding:3px 8px; border-radius:999px; background:rgba(96,165,250,0.1); border:1px solid rgba(96,165,250,0.3); margin:0 8px 10px 0; }
+    ul.clean { list-style:none; padding-left:0; margin:0; }
+    ul.clean li { margin:8px 0; color:#cbd5e1; }
+    .muted { color:#a4b1c6; }
     @keyframes fadeIn { from{opacity:0} to{opacity:1} }
     @keyframes slideUp { from{opacity:0; transform:translateY(20px)} to{opacity:1; transform:translateY(0)} }
     @keyframes fadeInUp { from{opacity:0; transform:translateY(40px)} to{opacity:1; transform:translateY(0)} }
+    @media (max-width:900px){ header{ grid-template-columns:1fr } }
   </style>
 </head>
 <body>
@@ -55,9 +59,36 @@
       </div>
     </div>
     <div>
-      <img src="https://via.placeholder.com/400x300" alt="Profile" style="border-radius:12px; width:100%; animation:fadeIn 2s ease;" />
+      <img src="https://via.placeholder.com/400x300" alt="Profile" style="border-radius:12px; width:100%; animation:fadeIn 1.2s ease;" />
     </div>
   </header>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div>
+      <span class="pill">Python</span><span class="pill">C++</span><span class="pill">C</span><span class="pill">Ruby</span><span class="pill">C#</span><span class="pill">JavaScript</span>
+      <span class="pill">HTML/CSS</span><span class="pill">Git</span><span class="pill">ASP.NET</span><span class="pill">Angular</span><span class="pill">Vue</span><span class="pill">REST APIs</span>
+      <span class="pill">AWS (SageMaker, EventBridge)</span><span class="pill">GCP (Vertex AI)</span><span class="pill">Azure</span>
+      <span class="pill">MySQL</span><span class="pill">SQL Server</span><span class="pill">Oracle</span>
+      <span class="pill">Linux/Ubuntu/Windows</span>
+      <span class="pill">Scikit‑learn</span><span class="pill">TensorFlow</span><span class="pill">PyTorch</span><span class="pill">XGBoost</span><span class="pill">PyCaret</span>
+      <span class="pill">OpenCV</span><span class="pill">Transformers</span><span class="pill">BERT/GPT</span><span class="pill">NLTK</span>
+      <span class="pill">Pandas</span><span class="pill">NumPy</span><span class="pill">Matplotlib</span><span class="pill">Seaborn</span><span class="pill">SciPy</span>
+      <span class="pill">Power BI</span><span class="pill">Excel</span>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="card">
+      <div class="pill">Dev Systems • Data Science Intern</div>
+      <div class="muted">Vijayawada, India • Jan 2024 – Jul 2024</div>
+      <ul class="clean">
+        <li>Queried and analyzed <b>5M+</b> customer records using SQL; built Python (Pandas, NumPy) workflows to surface retention and funnel trends, lifting engagement by <b>15%</b>.</li>
+        <li>Developed a <b>Gradio</b> suite of ML demonstrators enabling <b>20+</b> non‑technical stakeholders to test and validate model outputs, accelerating feedback cycles.</li>
+      </ul>
+    </div>
+  </section>
 
   <section id="projects">
     <h2>Projects</h2>
@@ -65,29 +96,68 @@
       <div class="card">
         <div class="pill">ML • Python</div>
         <h3>Customer Churn Prediction</h3>
-        <p>Developed predictive models for telecom churn with 85.6% accuracy, analyzing 5M+ records. <a href="https://github.com/Vishalreddy2020/Anticipating-Customer-Churn-in-Telecommunication-using-Machine-Learning-Algorithms-for-Customer" target="_blank">View GitHub Repo</a></p>
+        <p>Developed predictive models for telecom churn with 85.6% accuracy. <a href="https://github.com/Vishalreddy2020/Anticipating-Customer-Churn-in-Telecommunication-using-Machine-Learning-Algorithms-for-Customer" target="_blank">View GitHub Repo</a></p>
       </div>
       <div class="card">
         <div class="pill">KNN • ML</div>
         <h3>Obesity Prediction</h3>
-        <p>Built lifestyle-based KNN model with 92.3% accuracy. <a href="https://github.com/Vishalreddy2020/obesity-prediction-using-K-nearest-Neighbor" target="_blank">View GitHub Repo</a></p>
+        <p>Built lifestyle‑based KNN model with 92.3% accuracy. <a href="https://github.com/Vishalreddy2020/obesity-prediction-using-K-nearest-Neighbor" target="_blank">View GitHub Repo</a></p>
       </div>
       <div class="card">
         <div class="pill">Flask • MySQL</div>
         <h3>Music Album Database</h3>
-        <p>Created Flask app with MySQL backend to manage artists, albums, and playlists.</p>
+        <p>Flask app with MySQL backend to manage artists, albums, and playlists.</p>
       </div>
       <div class="card">
         <div class="pill">IoT • OpenCV</div>
         <h3>Smoke & Fire Detection</h3>
-        <p>Real-time video analysis + IoT sensors for early detection, reducing response time by 35%.</p>
+        <p>Real‑time video analysis + IoT sensors for early detection, reducing response time by 35%.</p>
       </div>
+    </div>
+  </section>
+
+  <section id="edu">
+    <h2>Education</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>North Carolina State University</h3>
+        <p class="muted">Master of Computer Science • GPA 3.88/4 • Aug 2024 – May 2026</p>
+        <div>
+          <span class="pill">Software Engineering</span><span class="pill">OODD</span><span class="pill">ALDA</span><span class="pill">HCI</span><span class="pill">Computer Networks</span><span class="pill">Neural Networks</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>SRM Institute of Science and Technology</h3>
+        <p class="muted">Bachelor of Computer Science • CGPA 8.59/10 • Aug 2020 – May 2024</p>
+        <div>
+          <span class="pill">DBMS</span><span class="pill">AI/ML</span><span class="pill">DSA</span><span class="pill">OOP</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certs">
+    <h2>Certifications</h2>
+    <div class="grid">
+      <div class="card"><div class="pill">ML</div><h3 style="margin:6px 0 0">Machine Learning</h3></div>
+      <div class="card"><div class="pill">Cloud</div><h3 style="margin:6px 0 0">AWS Cloud9</h3></div>
+      <div class="card"><div class="pill">Databases</div><h3 style="margin:6px 0 0">Oracle SQL</h3></div>
+      <div class="card"><div class="pill">Azure</div><h3 style="margin:6px 0 0">Azure AI Fundamentals</h3></div>
+    </div>
+  </section>
+
+  <section id="pubs">
+    <h2>Publications</h2>
+    <div class="card">
+      <div class="pill">Conference • 2024</div>
+      <h3>Anticipating Customer Churn in Telecommunication using ML Algorithms</h3>
+      <p class="muted">ICDCECE 2024 • Co‑authors: Rajarajan K., Priya S.</p>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Based in Raleigh, NC. Available for internships, research, and full-time roles in Data Science, AI/ML, and Software Development.</p>
+    <p>Based in Raleigh, NC. Available for internships, research, and full‑time roles in Data Science, AI/ML, and Software Development.</p>
     <a class="btn primary" href="mailto:vdevire2@ncsu.edu">Email Me</a>
     <a class="btn" href="https://www.linkedin.com/in/vishal-devireddy-bb1145240" target="_blank">LinkedIn</a>
   </section>
