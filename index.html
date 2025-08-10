@@ -1,122 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vishal Reddy Devireddy | Portfolio</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" />
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #0f172a;
-      color: #f8fafc;
-      scroll-behavior: smooth;
-    }
-    header, section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    header {
-      background: linear-gradient(135deg, #1e3a8a, #2563eb);
-      color: white;
-      text-align: center;
-      animation: fadeIn 2s ease-out;
-    }
-    h1 {
-      font-size: 2.5em;
-      margin: 0 0 10px;
-    }
-    h2 {
-      margin-bottom: 20px;
-      font-size: 1.5em;
-      border-bottom: 2px solid #3b82f6;
-      padding-bottom: 5px;
-    }
-    ul { list-style: none; padding-left: 0; }
-    li { margin-bottom: 10px; line-height: 1.6; }
-    a { color: #60a5fa; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      animation: slideUp 1s ease-in;
-    }
-    footer {
-      text-align: center;
-      padding: 30px;
-      background-color: #1e293b;
-      color: #cbd5e1;
-      animation: fadeIn 2s ease-in-out;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(-20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes slideUp {
-      from { transform: translateY(40px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-    section {
-      animation: slideUp 1.2s ease-in-out;
-    }
+    body { margin:0; font-family: 'Inter', sans-serif; background:#0b1220; color:#f8fafc; overflow-x:hidden; }
+    a { color:#60a5fa; text-decoration:none; }
+    .nav { position:sticky; top:0; backdrop-filter:blur(8px); background:rgba(18,26,43,0.9); padding:12px 20px; display:flex; justify-content:space-between; align-items:center; z-index:100; }
+    .brand { font-size:1.4rem; font-weight:800; background:linear-gradient(90deg,#60a5fa,#8b5cf6); -webkit-background-clip:text; color:transparent; }
+    .nav a { margin-left:16px; font-weight:600; transition:color .2s; }
+    .nav a:hover { color:#f8fafc; }
+    header { display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:center; padding:60px 20px; animation:fadeIn 1.2s ease forwards; }
+    .hero { font-size:clamp(2rem,5vw,3.5rem); font-weight:800; background:linear-gradient(135deg,#1e3a8a,#2563eb,#8b5cf6); -webkit-background-clip:text; color:transparent; animation:slideUp 1.5s ease forwards; }
+    .sub { color:#a4b1c6; margin:16px 0; animation:fadeIn 2s ease forwards; }
+    .cta .btn { display:inline-block; padding:12px 18px; border-radius:10px; background:#121a2b; border:1px solid rgba(148,163,184,.25); margin-right:10px; font-weight:600; transition:all .3s ease; }
+    .cta .btn.primary { background:linear-gradient(90deg,#60a5fa,#8b5cf6); border:none; }
+    .cta .btn:hover { transform:translateY(-3px); box-shadow:0 6px 20px rgba(96,165,250,0.4); }
+    section { padding:60px 20px; max-width:1100px; margin:auto; animation:fadeInUp 1.5s ease forwards; }
+    h2 { font-size:2rem; margin-bottom:20px; border-bottom:2px solid #3b82f6; display:inline-block; padding-bottom:4px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
+    .card { background:#121a2b; padding:20px; border-radius:14px; border:1px solid rgba(148,163,184,0.25); transition:transform .3s ease, box-shadow .3s ease; position:relative; overflow:hidden; }
+    .card:hover { transform:translateY(-5px) scale(1.02); box-shadow:0 10px 30px rgba(96,165,250,0.3); }
+    .pill { font-size:0.75rem; display:inline-block; padding:3px 8px; border-radius:999px; background:rgba(96,165,250,0.1); border:1px solid rgba(96,165,250,0.3); margin-bottom:10px; }
+    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+    @keyframes slideUp { from{opacity:0; transform:translateY(20px)} to{opacity:1; transform:translateY(0)} }
+    @keyframes fadeInUp { from{opacity:0; transform:translateY(40px)} to{opacity:1; transform:translateY(0)} }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Vishal Reddy Devireddy</h1>
-    <p><a href="mailto:vdevire2@ncsu.edu">vdevire2@ncsu.edu</a> | +1 (704) 747-8151 | <a href="https://www.linkedin.com/in/vishal-devireddy-bb1145240" target="_blank">LinkedIn</a></p>
+  <nav class="nav">
+    <div class="brand">Vishal Devireddy</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#edu">Education</a>
+      <a href="#certs">Certifications</a>
+      <a href="#pubs">Publications</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header id="about">
+    <div>
+      <h1 class="hero">Data Science & AI engineer delivering impactful, production-ready solutions.</h1>
+      <p class="sub">Graduate CS student at North Carolina State University, based in Raleigh, NC. Expert in NLP, computer vision, and cloud computing. Former Data Science Intern at Dev Systems.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn" href="resume.pdf" download>Download Resume</a>
+        <a class="btn" href="mailto:vdevire2@ncsu.edu">Email Me</a>
+      </div>
+    </div>
+    <div>
+      <img src="https://via.placeholder.com/400x300" alt="Profile" style="border-radius:12px; width:100%; animation:fadeIn 2s ease;" />
+    </div>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>Graduate Computer Science student at North Carolina State University with hands-on experience in AI/ML, NLP, full-stack development, and cloud computing. Enthusiastic about solving real-world problems using intelligent systems.</p>
-  </section>
-
-  <section>
-    <h2>Education</h2>
-    <ul>
-      <li><strong>North Carolina State University</strong> – MCS (GPA: 3.88/4) – Aug 2024 – May 2026</li>
-      <li><strong>SRM Institute of Science and Technology</strong> – BTech CSE (CGPA: 8.59/10) – Aug 2020 – May 2024</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div><strong>Languages:</strong> Python, C++, C, Ruby, MATLAB, iOS, C#, JavaScript</div>
-      <div><strong>Web Tech:</strong> HTML, CSS, Git, ASP.NET, Angular, Vue, REST APIs</div>
-      <div><strong>Cloud:</strong> AWS (Sagemaker, Eventbridge), GCP (Vertex AI), Azure</div>
-      <div><strong>Databases & OS:</strong> MySQL, SQL Server, Oracle, Windows, Ubuntu, Linux</div>
-      <div><strong>ML & AI:</strong> Scikit-learn, TensorFlow, PyTorch, XGBoost, PyCaret</div>
-      <div><strong>Computer Vision:</strong> CNNs, YOLO, OpenCV</div>
-      <div><strong>NLP:</strong> BERT, GPT, NLTK, Sentiment Analysis</div>
-      <div><strong>Data Science:</strong> Pandas, NumPy, Power BI, Excel</div>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="pill">ML • Python</div>
+        <h3>Customer Churn Prediction</h3>
+        <p>Developed predictive models for telecom churn with 85.6% accuracy, analyzing 5M+ records. <a href="https://github.com/Vishalreddy2020/Anticipating-Customer-Churn-in-Telecommunication-using-Machine-Learning-Algorithms-for-Customer" target="_blank">View GitHub Repo</a></p>
+      </div>
+      <div class="card">
+        <div class="pill">KNN • ML</div>
+        <h3>Obesity Prediction</h3>
+        <p>Built lifestyle-based KNN model with 92.3% accuracy. <a href="https://github.com/Vishalreddy2020/obesity-prediction-using-K-nearest-Neighbor" target="_blank">View GitHub Repo</a></p>
+      </div>
+      <div class="card">
+        <div class="pill">Flask • MySQL</div>
+        <h3>Music Album Database</h3>
+        <p>Created Flask app with MySQL backend to manage artists, albums, and playlists.</p>
+      </div>
+      <div class="card">
+        <div class="pill">IoT • OpenCV</div>
+        <h3>Smoke & Fire Detection</h3>
+        <p>Real-time video analysis + IoT sensors for early detection, reducing response time by 35%.</p>
+      </div>
     </div>
   </section>
 
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Customer Churn Prediction:</strong> ML models to predict telecom churn (85.6% accuracy, Logistic Regression)</li>
-      <li><strong>Music Album Database:</strong> Web app using Flask, MySQL, REST APIs for managing albums</li>
-      <li><strong>Obesity Prediction:</strong> KNN model achieving 92.3% accuracy on lifestyle data</li>
-      <li><strong>Smoke & Fire Detection System:</strong> IoT + ML + OpenCV integration for early fire detection</li>
-    </ul>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Based in Raleigh, NC. Available for internships, research, and full-time roles in Data Science, AI/ML, and Software Development.</p>
+    <a class="btn primary" href="mailto:vdevire2@ncsu.edu">Email Me</a>
+    <a class="btn" href="https://www.linkedin.com/in/vishal-devireddy-bb1145240" target="_blank">LinkedIn</a>
   </section>
-
-  <section>
-    <h2>Publications</h2>
-    <ul>
-      <li>"Anticipating Customer Churn in Telecommunication using ML Algorithms", ICDCECE 2024</li>
-    </ul>
-  </section>
-
-  <footer>
-    <p>© 2025 Vishal Reddy Devireddy</p>
-  </footer>
 </body>
 </html>
