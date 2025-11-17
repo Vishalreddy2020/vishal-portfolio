@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Vishal Reddy Devireddy</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" />
+  <style>
+    body { margin:0; font-family:'Inter',sans-serif; background:#020617; color:#e5e7eb; }
+    a { color:#60a5fa; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .container { max-width:900px; margin:0 auto; padding:30px 20px 50px; }
+    .back-link { font-size:0.9rem; margin-bottom:14px; display:inline-flex; align-items:center; gap:6px; color:#94a3b8; }
+    h1 { font-size:2rem; margin:10px 0 6px; }
+    h2 { font-size:1.4rem; margin:30px 0 6px; }
+    .muted { color:#9ca3af; font-size:0.9rem; }
+    .pill { font-size:0.75rem; display:inline-block; padding:3px 8px; border-radius:999px; background:rgba(15,23,42,0.9); border:1px solid rgba(96,165,250,0.6); margin:0 6px 6px 0; color:#bfdbfe; }
+    .section { margin-top:18px; }
+    ul { margin:8px 0 0 18px; padding:0; }
+    li { margin:6px 0; font-size:0.93rem; }
+    .block { padding:18px 18px 20px; border-radius:14px; background:radial-gradient(circle at top,#020617,#020617,#020617); border:1px solid rgba(148,163,184,0.25); margin-top:18px; }
+    .tagline { font-size:0.95rem; color:#a5b4fc; margin-bottom:4px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html#projects" class="back-link">← Back to portfolio</a>
+    <h1>Project Details</h1>
+    <p class="muted">Deep dives into selected Data Science, ML, LLM, and Computer Vision projects.</p>
+
+    <!-- RAG Assistant -->
+    <div id="rag-assistant" class="block">
+      <div class="tagline">LLM • RAG • Privacy-Preserving Search</div>
+      <h2>Privacy-Preserving Local Search & Messaging Assistant</h2>
+      <p class="muted">Tech Stack: Python, LangChain, FAISS, SentenceTransformers, FastAPI, SearxNG, Pandas, NumPy</p>
+      <div class="section">
+        <span class="pill">RAG</span><span class="pill">Local LLM</span><span class="pill">Vector Search</span><span class="pill">FAISS</span><span class="pill">API Design</span>
+      </div>
+      <div class="section">
+        <ul>
+          <li>Built a Retrieval-Augmented Generation (RAG) pipeline that indexes 50k+ documents with FAISS and SentenceTransformers, enabling low-latency semantic search fully on local infrastructure.</li>
+          <li>Implemented document chunking, embedding generation, ranking, and response synthesis, along with evaluation plots for retrieval hit-rate and embedding clusters.</li>
+          <li>Integrated SearxNG meta-search with local LLM inference through FastAPI endpoints, improving answer relevance by tuning chunk sizes, prompts, and embedding models.</li>
+        </ul>
+      </div>
+      <div class="section">
+        <a href="https://github.com/Vishalreddy2020/local-llm-searxng-agent" target="_blank">View GitHub repository →</a>
+      </div>
+    </div>
+
+    <!-- Churn -->
+    <div id="churn" class="block">
+      <div class="tagline">Supervised ML • Telecom Analytics</div>
+      <h2>Customer Churn Prediction in Telecommunications</h2>
+      <p class="muted">Tech Stack: Python, Scikit-learn, TensorFlow, Pandas, NumPy, Matplotlib, Seaborn, Jupyter</p>
+      <div class="section">
+        <span class="pill">Classification</span><span class="pill">EDA</span><span class="pill">Model Evaluation</span>
+      </div>
+      <div class="section">
+        <ul>
+          <li>Cleaned and transformed 7k+ telecom customer records, performed EDA with correlation heatmaps, churn-distribution plots, and feature comparison charts to understand behavior patterns.</li>
+          <li>Trained Logistic Regression, Random Forest, KNN, and Neural Network models using cross-validation, achieving 85.6% accuracy and evaluating performance via ROC-AUC and confusion matrices.</li>
+          <li>Generated feature-importance and metric reports that highlighted key churn drivers, informing recommendations for retention strategies and customer segmentation.</li>
+        </ul>
+      </div>
+      <div class="section">
+        <a href="https://github.com/Vishalreddy2020/Anticipating-Customer-Churn-in-Telecommunication-using-Machine-Learning-Algorithms-for-Customer" target="_blank">View GitHub repository →</a>
+      </div>
+    </div>
+
+    <!-- YOLOv8 -->
+    <div id="yolov8" class="block">
+      <div class="tagline">Computer Vision • Real-Time Detection</div>
+      <h2>YOLOv8 Object Detection System</h2>
+      <p class="muted">Tech Stack: Python, YOLOv8, OpenCV, PyTorch, FastAPI, NumPy, Matplotlib</p>
+      <div class="section">
+        <span class="pill">Object Detection</span><span class="pill">FastAPI</span><span class="pill">mAP Evaluation</span>
+      </div>
+      <div class="section">
+        <ul>
+          <li>Trained a YOLOv8 model with augmentation techniques (rotations, contrast shifts, scaling) to improve robustness and visualize bounding boxes for debugging and quality assessment.</li>
+          <li>Evaluated detection performance using mAP and precision–recall curves, analyzing per-class behavior and tuning thresholds to balance precision and recall.</li>
+          <li>Deployed the model via a FastAPI endpoint for real-time inference and built an interactive interface to test live images and monitor predictions.</li>
+        </ul>
+      </div>
+      <div class="section">
+        <a href="https://github.com/Vishalreddy2020" target="_blank">View related GitHub work →</a>
+      </div>
+    </div>
+
+    <!-- Music DB -->
+    <div id="music-db" class="block">
+      <div class="tagline">Full-Stack • Flask • SQL</div>
+      <h2>Music Album Database Platform</h2>
+      <p class="muted">Tech Stack: Flask, MySQL, HTML/CSS/JavaScript, REST APIs</p>
+      <div class="section">
+        <span class="pill">Backend</span><span class="pill">SQL</span><span class="pill">Authentication</span>
+      </div>
+      <div class="section">
+        <ul>
+          <li>Designed a Flask-based backend with MySQL to manage artists, albums, songs, and playlists, including secure authentication and session management.</li>
+          <li>Optimized SQL queries and indexing on frequently accessed tables, reducing response times by roughly 30% on common endpoints.</li>
+          <li>Implemented a simple analytics view with popularity charts and basic user activity metrics for music exploration.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Obesity -->
+    <div id="obesity" class="block">
+      <div class="tagline">K-Nearest Neighbor • Health Analytics</div>
+      <h2>Obesity Prediction using K-Nearest Neighbor</h2>
+      <p class="muted">Tech Stack: Python, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn</p>
+      <div class="section">
+        <span class="pill">KNN</span><span class="pill">Classification</span>
+      </div>
+      <div class="section">
+        <ul>
+          <li>Built a KNN classifier to predict obesity levels based on demographic and lifestyle attributes such as age, gender, activity, and diet patterns.</li>
+          <li>Used cross-validation to tune the K parameter and distance metrics, improving generalization and minimizing overfitting.</li>
+          <li>Visualized data distributions and decision boundaries to interpret model behavior and feature influence.</li>
+        </ul>
+      </div>
+      <div class="section">
+        <a href="https://github.com/Vishalreddy2020/obesity-prediction-using-K-nearest-Neighbor" target="_blank">View GitHub repository →</a>
+      </div>
+    </div>
+
+    <!-- Smoke & Fire -->
+    <div id="smoke-fire" class="block">
+      <div class="tagline">IoT • OpenCV • Safety</div>
+      <h2>Smoke & Fire Detection System</h2>
+      <p class="muted">Tech Stack: Python, OpenCV, IoT Sensors, Basic Networking</p>
+      <div class="section">
+        <span class="pill">Computer Vision</span><span class="pill">IoT</span>
+      </div>
+      <div class="section">
+        <ul>
+          <li>Combined live video processing with OpenCV and sensor readings to detect smoke and fire patterns in real time.</li>
+          <li>Prototyped alert logic that triggers notifications upon detection, reducing simulated response times by roughly 35% in test scenarios.</li>
+          <li>Explored integration points for future cloud-based logging and dashboard visualization.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
