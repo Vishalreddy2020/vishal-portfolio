@@ -20,7 +20,9 @@
     /* Top section: name + photo + about */
     .intro-grid { display:grid; grid-template-columns:280px minmax(0,1fr); gap:32px; align-items:center; margin-bottom:40px; }
     .profile-photo-wrap { text-align:center; }
-    .profile-photo { width:220px; height:220px; border-radius:999px; object-fit:cover; border:3px solid rgba(96,165,250,0.7); box-shadow:0 18px 40px rgba(15,23,42,0.9); }
+    .profile-photo { width:220px; height:220px; border-radius:999px; object-fit:cover; border:3px solid rgba(96,165,250,0.7); box-shadow:0 18px 40px rgba(15,23,42,0.9); cursor:pointer; transition:transform 0.2s ease, box-shadow 0.2s ease; }
+    .profile-photo:hover { transform:scale(1.05); box-shadow:0 20px 45px rgba(96,165,250,0.5); }
+    .profile-photo-link { display:inline-block; }
     .name-title { margin-top:14px; font-size:1.6rem; font-weight:800; }
     .location { font-size:0.9rem; color:#9ca3af; }
 
@@ -88,7 +90,9 @@
       <div class="intro-grid">
         <div class="profile-photo-wrap">
           <!-- Replace vishal-profile.jpg with your actual image filename if different -->
-          <img src="vishal-profile.jpg" alt="Vishal Reddy Devireddy" class="profile-photo" />
+          <a href="vishal-profile.jpg" download="Vishal-Reddy-Devireddy-Photo.jpg" class="profile-photo-link" title="Click to download photo">
+            <img src="vishal-profile.jpg" alt="Vishal Reddy Devireddy" class="profile-photo" />
+          </a>
           <div class="name-title">Vishal Reddy Devireddy</div>
           <div class="location">Raleigh, NC • Data Science & AI Engineer</div>
         </div>
@@ -103,7 +107,7 @@
           <div class="cta">
             <a class="btn primary" href="#projects">View Projects</a>
             <!-- Make sure Vishal_Reddy_Resume.pdf exists in the same folder -->
-            <a class="btn" href="Vishal_Reddy_Resume.pdf" download>Download Resume</a>
+            <a class="btn" href="Vishal_Reddy_Resume.pdf" download="Vishal-Reddy-Devireddy-Resume.pdf">Download Resume</a>
             <a class="btn" href="mailto:vdevire2@ncsu.edu" title="vdevire2@ncsu.edu">Email Me</a>
           </div>
           <div class="snapshot-card">
